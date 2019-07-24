@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video-Call-Client", "Video-Call-Client\Video-Call-Client.csproj", "{80261B45-31FB-4FBC-ACE7-788D2276FC4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video-Call-Server", "Video-Call-Server\Video-Call-Server.csproj", "{5A0E1C9D-5EB1-4825-8807-0584EEE2B462}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80261B45-31FB-4FBC-ACE7-788D2276FC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80261B45-31FB-4FBC-ACE7-788D2276FC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80261B45-31FB-4FBC-ACE7-788D2276FC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80261B45-31FB-4FBC-ACE7-788D2276FC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0E1C9D-5EB1-4825-8807-0584EEE2B462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0E1C9D-5EB1-4825-8807-0584EEE2B462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0E1C9D-5EB1-4825-8807-0584EEE2B462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0E1C9D-5EB1-4825-8807-0584EEE2B462}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFEC09B6-0BCD-40E3-8A6B-5863756D2035}
+	EndGlobalSection
+EndGlobal
