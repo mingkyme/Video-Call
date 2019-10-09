@@ -1,0 +1,41 @@
+﻿<Window x:Class="Video_Call_Server.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Video_Call_Server"
+        xmlns:customClass="clr-namespace:Video_Call_Server.CustomClass"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Server" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Viewbox x:Name="XAML_Viewbox" Stretch="Fill">
+            <Grid>
+                <Image x:Name="XAML_Image" Stretch="Uniform"/>
+                <customClass:CustomCanvas x:Name="XAML_MainCanvas" MouseMove="XAML_MainCanvas_MouseMove" MouseLeftButtonUp="XAML_MainCanvas_MouseLeftButtonUp" Background="Transparent" Panel.ZIndex="10"/>
+                <InkCanvas Name="XAML_InkCanvas" StrokeCollected="XAML_InkCanvas_StrokeCollected" MouseMove="XAML_InkCanvas_MouseMove" Visibility="{Binding ElementName=XAML_MainCanvas,Path=DrawMode,Converter={StaticResource IsPenConverter}}" Panel.ZIndex="10" Background="Transparent"/>
+
+            </Grid>
+        </Viewbox>
+
+        <DockPanel Grid.Row="1" LastChildFill="True" Panel.ZIndex="10">
+            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" >
+                <customClass:CustomPenModeRadioButton GroupName="DrawModes" Content="Pen" DrawMode="Pen" Margin="6" IsChecked="True" Checked="CustomPenModeRadioButton_Checked"/>
+                <customClass:CustomPenModeRadioButton GroupName="DrawModes" Content="Rectangle" DrawMode="Rectangle" Margin="6" Checked="CustomPenModeRadioButton_Checked"/>
+                <customClass:CustomPenModeRadioButton GroupName="DrawModes" Content="Ellipse" DrawMode="Ellipse" Margin="6" Checked="CustomPenModeRadioButton_Checked"/>
+                <customClass:CustomPenModeRadioButton GroupName="DrawModes" Content="Eraser" DrawMode="Eraser" Margin="6" Checked="CustomPenModeRadioButton_Checked"/>
+            </StackPanel>
+            
+            <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right"  Orientation="Horizontal">
+                <customClass:CustomColorRadioButton Content="BLACK" Color="Black" IsChecked="True" Margin="6" Checked="CustomColorRadioButton_Checked"/>
+                <customClass:CustomColorRadioButton Content="RED" Color="Red" Margin="6" Checked="CustomColorRadioButton_Checked"/>
+                <customClass:CustomColorRadioButton Content="GREEN" Color="Green"  Margin="6" Checked="CustomColorRadioButton_Checked"/>
+            </StackPanel>
+            <Slider Margin="6" Minimum="1" Maximum="30" Value="10" ValueChanged="Slider_ValueChanged"/>
+        </DockPanel>
+    </Grid>
+</Window>
